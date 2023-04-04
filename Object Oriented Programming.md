@@ -32,7 +32,7 @@ class |keyword| <-- Keyword that allows us to create our own classes.
 2. Methods: Functions that the object can call.
 ---
 ---
-### What is an Object
+### What is an Object?
 
 A [Object](https://www.javatpoint.com/what-is-an-object-in-python) can either be a variable, data structure, a function or a method. An object in Object Oriented Programming is an instance of a class where this object can be a combination of a variable, data structure, or a function.
 
@@ -44,4 +44,41 @@ A [Object](https://www.javatpoint.com/what-is-an-object-in-python) can either be
 
 3. Identity: Objects are Uniquely identified  and allow interacting with other objects.
 ---
+---
+
+### What is Encapsulation?
+
+[Encapsulation](https://www.sumologic.com/glossary/encapsulation/#:~:text=Encapsulation%20is%20a%20way%20to,an%20instantiated%20class%20or%20object.), also known as  Information hiding Restricts the acces to class/objects containing certain attributes and methods. We use Encapsulation for Data Protection and to restrict certain methods to be callable. For python, Encapsulation uses a special system, We hide attributes and methods by using a Double underscore ( __ ) as a prefix.
+
+Encapsulation Example:
+
+```python
+class Student:
+    def __init__(self, nameF, nameL, num):
+        self.firstName = nameF
+        self.lastName = nameL
+        self.__studentNumber = num
+       
+    def __getStudentNumber(self):
+        return self.__studentNumber
+       
+#end of Student
+
+s1 = Student("Thomas", "Petkovic", 335714598)
+print(s1.firstName)
+
+#Another Better option/ Common Practice
+
+    def setFirstName(self, newName): <-- setter
+        self.__firstName = newName
+    
+    def getFirstName(self): <-- getter
+        return self.__firstName
+    
+  
+    
+    
+```
+
+
 
