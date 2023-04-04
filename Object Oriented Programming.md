@@ -83,10 +83,42 @@ print(s1.firstName)
 
 [Overloading](https://www.scaler.com/topics/function-overloading-in-python/) is defined when two methods in one class have the same method name but different parameters. **There is no Overloading in Python 3**
 
+
+Example of Overloading:
+
+```python
+
+class Calculator:
+    def add(self, x, y):
+        return x + y
+    
+    def add(self, x, y, z):
+        return x + y + z
+        
+# same method name but different parameters
+```
+
 [Overriding](https://www.upgrad.com/blog/method-overriding-in-python/#:~:text=called%20multilevel%20inheritance.-,What%20is%20Method%20Overriding%20in%20Python%3F,the%20parent%20class%20or%20superclass.) is defined when two methods have the same name and have the same parameters.
 
-FOr example
+Example of Overriding:
 
+```python
+
+class Animal:    
+    def make_sound(self):
+        print("Animal makes a sound")
+
+class Cat(Animal):
+    def make_sound(self):
+        print("Meow")
+        
+# Cat inherits from Animal and overrides the make_sound method to prints "Meow" instead of "Animal makes a sound"
+
+```
+---
+---
+
+HELP ME PLEASEEEEEEEEE :)
 
 
 
