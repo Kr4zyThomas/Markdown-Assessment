@@ -75,10 +75,19 @@ print(s1.firstName)
     def getFirstName(self): <-- getter
         return self.__firstName
     
-  
-    
-    
 ```
+---
+---
+
+### What is Overloading & Overriding
+
+[Overloading](https://www.scaler.com/topics/function-overloading-in-python/) is defined when two methods in one class have the same method name but different parameters. **There is no Overloading in Python 3**
+
+[Overriding](https://www.upgrad.com/blog/method-overriding-in-python/#:~:text=called%20multilevel%20inheritance.-,What%20is%20Method%20Overriding%20in%20Python%3F,the%20parent%20class%20or%20superclass.) is defined when two methods have the same name and have the same parameters.
+
+FOr example
+
+
 
 
 
