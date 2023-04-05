@@ -246,16 +246,18 @@ class Child(Parent):
 
 ### What are Iterable Objects?
 
-Iterable objects are objects that we can interate through like a sequence.
+[Iterable objects](https://www.w3schools.com/python/python_iterators.asp#:~:text=An%20iterator%20is%20an%20object) are objects that we can interate through like a sequence.
 Ex: Strings, Lists, Sets, Dictionaries etc.)
 
 Interable does not always mean indexable
 
-__Iter__() allows our object to be iterable when usedm it will call the method by returning itself
+_ _ iter _ _() allows our object to be iterable when usedm it will call the method by returning itself
+ 
+_ _ next _ _() allows us to get to the next value when interating. 
+ 
+When the end of the sequence is reached use **raise StopIteration**
 
-__next__() allows us to get to the next value when interating.
 
-When the end of a squence is reached, use **raise StopIteration**
 ---
 ---
 
