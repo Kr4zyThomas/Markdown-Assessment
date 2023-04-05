@@ -244,5 +244,27 @@ class Child(Parent):
 ---
 ---
 
+### What are Iterable Objects?
+
+Iterable objects are objects that we can interate through like a sequence.
+Ex: Strings, Lists, Sets, Dictionaries etc.)
+
+Interable does not always mean indexable
+
+__Iter__() allows our object to be iterable when usedm it will call the method by returning itself
+
+__next__() allows us to get to the next value when interating.
+
+When the end of a squence is reached, use **raise StopIteration**
+---
+---
+
+ 
+
+
+
+
+
+
 
 
