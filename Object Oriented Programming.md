@@ -16,8 +16,11 @@ class Person:
     def__init__(self,name):
         self.name = name
     
-    def__str__(self):
+    def__str__(self): <-- Allows us to convert our object to string
         return f" Person object called: {self.name}"
+    
+    def __repr__(self): <-- Allows us to present a printable version of our object
+        return __str__()
 
 class |keyword| <-- Keyword that allows us to create our own classes.
 ```
@@ -117,9 +120,129 @@ class Cat(Animal):
 ```
 ---
 ---
+### What is Polymorphism?
 
-HELP ME PLEASEEEEEEEEE :)
+[Polymorphism](https://www.edureka.co/blog/polymorphism-in-python/#:~:text=Polymorphism%20in%20python%20defines%20methods,inherited%20from%20the%20parent%20class.) is a method that can be used across different class and is dependent on the parameters
 
+#### Overriding and Polymorphism.
+
+The two Fundamental concepts of overriding and polymorphism in python are:
+- Two classes can have the same attributes and methods
+- A child of a parent can have an overrided method
+
+If we overide a built-in method that we use in python called "magic methods"
+
+For example:
+
+```python
+
+class Dog:
+    def __init__(self, name):
+        self.__name = name
+        
+    def __str__(self):
+        return "Woof, I'm %s." % self.__name
+lab = Dog("Luna")
+print(lab) <-- "Woof, I'm Luna."
+```
+
+Why do we Override built in methods/operators?
+
+- We can complete mathematical operations on objects
+- We can compare equality between objects
+
+We can therefore manipulate how the object behanve when met with a built in method
+---
+---
+### What is Inheritance
+
+[Inheritance](https://www.w3schools.com/python/python_inheritance.asp) is when an object or class is based on another class and its features (**parent class**)
+
+
+
+Types:
+- Single Inheritance: A > B
+- Multiple Inheritance: A > C < B or A > B > C or a mixture of the two
+- Multilevel Inheritance: A > B > C
+
+
+Types of Multiple Inheritances
+
+Inhertance types can mix creating a Hybrid.
+
+A child will receive all attributes and methods from parent
+A child can create new attributes and methods
+A child can Override attributes and methods
+
+**Important:**
+- The child does not need a now Initialization method unless new attributes are needed
+- The child does not need to reinstate parents methods unless overriden
+
+```python
+
+class Person:
+    def __init__(self, name):
+        self.__name = name
+        
+    def getName(self):
+        return self.__name
+        
+class Student(Person):
+    def __init__(self, name, num):
+        Person.__init__(self, name)
+        self.__sNum = num
+        
+    def getStudentName(self):
+        return("%s: %s" % (self.__sNum, self.getName()))
+        
+```
+#### What is Super()
+
+[Super()](https://www.programiz.com/python-programming/methods/built-in/super) is a built-in method for classes to refer to their parent class
+
+prevents ParentClass.method(self)
+
+Example with super():
+
+```python
+class Person:
+    def __init__(self, name):
+        self.__name = name
+        
+    def getName(self):
+        return self.__name
+        
+class Student(Person):
+    def __init__(self, name, num):
+       super().__init__(name)
+        self.__sNum = num
+        
+    def getStudentName(self):
+        return("%s: %s" % (self.__sNum, self.getName()))
+        
+```
+---
+---
+
+### Polymorphism in Inherited Classes!
+
+Inherited classes modifying Inheroted Methods (Overriding) --> polymorphism in python
+
+```python
+class Parent:
+    def method(self):
+        pass
+class Child(Parent):
+    def method(self):
+        # something different
+        # Polymorphed into something else
+        # same method name
+        pass
+
+```
+
+---
+---
 
 
 
